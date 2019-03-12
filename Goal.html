@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="http://code.jquery.com/jquery-3.3.1.min.js"
-			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-			  crossorigin="anonymous"></script>
+    <script src="jq.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     
@@ -14,7 +12,7 @@
     <title>Tic Tac Toe</title>
 </head>
 <body>
-    test
+  
     <header ondrop="drop(event)" ondragover="allowDrop(event)">
    
   
@@ -31,10 +29,7 @@
       
     </header>
     <!-- playing background audio -->
-    <audio id="stop" controls autoplay  style="display:none">
-       
-            <source src="audio/adi1.mp3" allow="autoplay;" type="audio/mp3">
-         
+    <audio id="stop" src="audio/adi1.mp3" controls autoplay>
           </audio> 
           <!-- audio in alert wining -->
           <audio id="goal" src="audio/Goal.mp3" preload="auto"></audio>
@@ -79,24 +74,22 @@
     
     </div>
   
-    <!-- score divs -->
+
     <div>
-            <div class="player1 score" > score</div> 
-            <div  class="player1 score" id="score0">0</div> 
+      
   <div class="player1" ondrop="drop(event)" ondragover="allowDrop(event)">
     
 <h3>Team 1</h3>
 
 </div>
-<div class="player2 score"> score</div> 
-<div class="player2 score" id="score1"> 0</div>  
+
 <div class="player2" ondrop="drop(event)" ondragover="allowDrop(event)">
       
         <h3>Team 2</h3>
       
    </div>
 </div>
-<button id="buttonHalf" onclick="secondHalf()">Second Half</button>
+
 <button class="buttonNew">New Game</button>
   
 <script type="text/javascript" src="Goal.js"></script>

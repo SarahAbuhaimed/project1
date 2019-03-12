@@ -1,15 +1,15 @@
 
 //drag and drop img of football tems inside plyer div
-function allowDrop(ev) {
-    ev.preventDefault();
+function allowDrop(event) {
+    event.preventDefault();
 }
-function drag(ev) {
-    ev.dataTransfer.setData("text", ev.target.id);
+function drag(event) {
+    event.dataTransfer.setData("text", event.target.id);
 }
-function drop(ev) {
-    ev.preventDefault();
-    var data = ev.dataTransfer.getData("text");
-    ev.target.appendChild(document.getElementById(data));
+function drop(event) {
+    event.preventDefault();
+    var data = event.dataTransfer.getData("text");
+    event.target.appendChild(document.getElementById(data));
 }
 //object with all cases plyer can win by
 var winCase = {
@@ -25,8 +25,6 @@ var winCase = {
 //plyers variable store array of divs selected
 var player1 = [];
 var player2 = [];
-var plyer1Score = 0;
-var plyer2Score = 0;
 //to store sign x and O
 var sign = true;
 //function for button which reload page 
@@ -39,7 +37,7 @@ $('.square').on("mouseover", function (event) {
     $(this).addClass("black");
 
 });
-// removw highlight the mouseover divs
+// remove highlight the mouseover divs
 $('.square').on("mouseout", function (event) {
 
     $(this).removeClass("black");
@@ -71,36 +69,36 @@ function checkWinner() {
     for (var i = 1; i < 9; i++) {
         if (player1.includes(winCase[i][0]) && player1.includes(winCase[i][1]) && player1.includes(winCase[i][2])) {
             noWon = false;
+               //to stop plyer from clicking another box after wining
+            $('.square').off('click');
+
             //stop background audio 
-            document.getElementById('stop').pause();
+            // document.getElementById('stop').pause();
             //play success audio
             document.getElementById('goal').play();
             swal({
-                title: "X Win",
+                title: "Team 1 Win",
                 icon: "img/Goal1.png"
-            });
+            //     onClose: closePlay
 
-            //get plyer1 score
-            plyer1Score += 1;
-            document.getElementById('score0').textContent = plyer1Score;
-       
+            // }).then(function closePlay() {
+            //     return document.getElementById('goal').pause();
+            
+            });
         } 
 
         else if (player2.includes(winCase[i][0]) && player2.includes(winCase[i][1]) && player2.includes(winCase[i][2])) {
             noWon = false;
             //to stop plyer from clicking another box after wining
-           
-            //stop background audio 
-            document.getElementById('stop').pause();
-            //play success audio
+            $('.square').off('click');
+            
+           //play success audio
             document.getElementById('goal').play();
             swal({
-                title: "O Win",
-                icon: "img/Goal1.png" 
+                 
+                title: "Team 1 Win",
+                icon: "img/Goal1.png",
             });
-            //get plyer2 score
-            plyer2Score += 1;
-            document.getElementById('score1').textContent = plyer2Score;
            
         }
 
@@ -118,12 +116,9 @@ function checkWinner() {
             }
         }
     }
-}
-function secondHalf(){
-    $(".square").text("");
-    player1 = []
-    player2 = []
-}
+    
+}  
+
 
 
 
