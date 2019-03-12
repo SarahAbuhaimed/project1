@@ -73,7 +73,7 @@ function checkWinner() {
             $('.square').off('click');
 
             //stop background audio 
-            // document.getElementById('stop').pause();
+            document.getElementById('stop').pause();
             //play success audio
             document.getElementById('goal').play();
             swal({
@@ -91,7 +91,8 @@ function checkWinner() {
             noWon = false;
             //to stop plyer from clicking another box after wining
             $('.square').off('click');
-            
+              //stop background audio 
+              document.getElementById('stop').pause();
            //play success audio
             document.getElementById('goal').play();
             swal({
