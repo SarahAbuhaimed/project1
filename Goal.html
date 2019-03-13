@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,91 +8,100 @@
     <script src="jq.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    
+
     <link rel="stylesheet" href="Goal.css">
     <title>Tic Tac Toe</title>
 </head>
+
 <body>
-  
+
     <header ondrop="drop(event)" ondragover="allowDrop(event)">
-   
-  
-            <!-- img in header teams and soccer img -->
-            <input class="team" draggable="true" ondragstart="drag(event)" id="afc" type="image" src="img/AFC.png" alt="Submit" width="60" height="60">
-            <input class="team" draggable="true" ondragstart="drag(event)" id="fcb" type="image" src="img/fcb.png" alt="Submit"  width="60" height="60">
-            <input class="team" draggable="true" ondragstart="drag(event)" id="mfc" type="image" src="img/mfc.png" alt="Submit"  width="60" height="60">
-            <input class="team" draggable="true" ondragstart="drag(event)" id="ufc" type="image" src="img/mufc.png" alt="Submit"  width="60" height="60">
-            <img src="img/Soccer_Ball.png" width="130" height="123">
-            <input class="team" draggable="true" ondragstart="drag(event)" id="nfc" type="image" src="img/nfc1.png" alt="Submit"  width="60" height="60">
-            <input class="team" draggable="true" ondragstart="drag(event)" id="hfc" type="image" src="img/hi.png" alt="Submit"  width="60" height="60">
-            <input class="team" draggable="true" ondragstart="drag(event)" id="itfc" type="image" src="img/itfc.png" alt="Submit"  width="60" height="60">
-            <input class="team" draggable="true" ondragstart="drag(event)" id="ahfc" type="image" src="img/ahfc.png" alt="Submit"  width="60" height="60">
-      
+        <!-- img in header teams and soccer img -->
+        <input class="team" draggable="true" ondragstart="drag(event)" id="afc" type="image" src="img/AFC.png"
+            alt="Submit" width="60" height="60">
+        <input class="team" draggable="true" ondragstart="drag(event)" id="fcb" type="image" src="img/fcb.png"
+            alt="Submit" width="60" height="60">
+        <input class="team" draggable="true" ondragstart="drag(event)" id="mfc" type="image" src="img/mfc.png"
+            alt="Submit" width="60" height="60">
+        <input class="team" draggable="true" ondragstart="drag(event)" id="ufc" type="image" src="img/mufc.png"
+            alt="Submit" width="60" height="60">
+        <img src="img/Soccer_Ball.png" width="130" height="123">
+        <input class="team" draggable="true" ondragstart="drag(event)" id="nfc" type="image" src="img/nfc1.png"
+            alt="Submit" width="60" height="60">
+        <input class="team" draggable="true" ondragstart="drag(event)" id="hfc" type="image" src="img/hi.png"
+            alt="Submit" width="60" height="60">
+        <input class="team" draggable="true" ondragstart="drag(event)" id="itfc" type="image" src="img/itfc.png"
+            alt="Submit" width="60" height="60">
+        <input class="team" draggable="true" ondragstart="drag(event)" id="ahfc" type="image" src="img/ahfc.png"
+            alt="Submit" width="60" height="60">
     </header>
     <!-- playing background audio -->
     <audio id="stop" src="audio/adi1.mp3" controls autoplay>
-          </audio> 
-          <!-- audio in alert wining -->
-          <audio id="goal" src="audio/Goal.mp3" preload="auto"></audio>
-          <audio id="no" src="audio/no.mp3" preload="auto"></audio>
-          <!-- divs which make the table -->
- <div class="box">
-    
+    </audio>
+    <!-- audio in alert wining -->
+ <audio id="goal" src="audio/Goal.mp3" preload="auto"></audio>
+    <audio id="no" src="audio/no.mp3" preload="auto"></audio>
+
+    <!-- divs which make the table -->
+    <div class="box">
+
         <div class="center-div">
-                
+
             <div class="square" id="square0">
-              
+
             </div>
             <div class="square" id="square3">
-                  
+
             </div>
             <div class="square" id="square6">
-                 
+
             </div>
         </div>
-            <div class="center-div">
+        <div class="center-div">
             <div class="square" id="square1">
-                  
+
             </div>
-            <div class="square" id="square4"> 
-             
-        </div>
+            <div class="square" id="square4">
+
+            </div>
             <div class="square" id="square7">
-                  
+
             </div>
         </div>
         <div class="center-div">
             <div class="square" id="square2">
-                   
+
             </div>
             <div class="square" id="square5">
-                   
+
             </div>
             <div class="square" id="square8">
-                   
+
             </div>
         </div>
-    
+
     </div>
-  
+
 
     <div>
-      
-  <div class="player1" ondrop="drop(event)" ondragover="allowDrop(event)">
-    
-<h3>Team 1</h3>
+            <div class="player player1 score" > score</div> 
+            <div  class="player  player1 score" id="score0">0</div> 
+        <div class="player player1" ondrop="drop(event)" ondragover="allowDrop(event)">
 
-</div>
+            <h3>Team 1</h3>
 
-<div class="player2" ondrop="drop(event)" ondragover="allowDrop(event)">
-      
-        <h3>Team 2</h3>
-      
-   </div>
-</div>
+        </div>
+        <div class="player player2 score"> score</div> 
+<div class="player player2 score" id="score1"> 0</div>  
+        <div class="player player2" ondrop="drop(event)" ondragover="allowDrop(event)">
 
-<button class="buttonNew">New Game</button>
-  
-<script type="text/javascript" src="Goal.js"></script>
+            <h3>Team 2</h3>
+
+        </div>
+    </div>
+    <button id="buttonHalf" onclick="secondHalf()">Second Half</button>
+    <button class="buttonNew">New Game</button>
+    <script type="text/javascript" src="Goal.js"></script>
 </body>
+
 </html>
