@@ -1,4 +1,15 @@
-
+//drag and drop img of football teams inside plyer div
+function allowDrop(event) {
+    event.preventDefault();
+}
+function drag(event) {
+    event.dataTransfer.setData("text", event.target.id);
+}
+function drop(event) {
+    event.preventDefault();
+    var data = event.dataTransfer.getData("text");
+    event.target.appendChild(document.getElementById(data));
+}
 
 //object with all cases plyer can win by
 var winCase = {
@@ -121,20 +132,14 @@ function secondHalf(){
 $('.square').on("mouseout", function (event) {
     $(this).removeClass("black");
 });
+   //stop all audio playing
+   document.getElementById('goal').pause();
+   document.getElementById('no').pause();
+  //play background audio 
+  document.getElementById('stop').play();
 }
 
-//drag and drop img of football teams inside plyer div
-function allowDrop(event) {
-    event.preventDefault();
-}
-function drag(event) {
-    event.dataTransfer.setData("text", event.target.id);
-}
-function drop(event) {
-    event.preventDefault();
-    var data = event.dataTransfer.getData("text");
-    event.target.appendChild(document.getElementById(data));
-}
+
 
 
 

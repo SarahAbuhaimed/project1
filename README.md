@@ -1,4 +1,4 @@
-# ![GA Logo](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Project #1: Tic Tac Toe
+# ![GA Logo](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Project #1: Soccer tic tac toe
 
 ## Soccer tic tac toe:
 
@@ -14,4 +14,7 @@ it is a two player game :
 - **Seconde half**: button to start a new round of the game.
 
 - **New Game**: to start a new game and clear scores. 
+
+## Demo:
+[![Watch the video](https://ibb.co/hd99SDR)](https://files.fm/f/yruxk73a)
 
