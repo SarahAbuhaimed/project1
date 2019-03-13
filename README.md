@@ -16,5 +16,5 @@ it is a two player game :
 - **New Game**: to start a new game and clear scores. 
 
 ## Demo:
-[![Watch the video](https://ibb.co/hd99SDR)](https://files.fm/f/yruxk73a)
+[![Watch the video](https://youtu.be/RR_4KerNsKY/maxresdefault.jpg)](https://youtu.be/RR_4KerNsKY)
 
